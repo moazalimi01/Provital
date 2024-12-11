@@ -4,7 +4,7 @@ import styles from "../styles/HeroSection.module.scss";
 import ImageCarousel1 from "./ImageCarousel1"; // Adjust the path if needed
 import ImageCarousel2 from "./ImageCarousel2"; // Adjust the path if needed
 import ImageCarousel3 from "./ImageCarousel3"; // Import ImageCarousel3
-import { BsPostcardHeart, MdLocationOn, IoMdSearch } from "./Icons";
+import { BsPostcardHeart, MdLocationOn, IoMdSearch, IoMdSearchW } from "./Icons";
 
 const HeroSection = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -54,23 +54,25 @@ const HeroSection = () => {
                 <p>Optimize your lifestyle and reverse chronic diseases.</p>
 
                 {/* Search Bar */}
-                <div className={styles.searchBar}>
-                    <div className={styles.conditionWrapper}>
-                        <IoMdSearch className={styles.searchIcon} />
-                        <input type="text" placeholder="Condition, procedure, speciality..." />
-                    </div>
-                    <div className={styles.locationWrapper}>
-                        <MdLocationOn className={styles.locationIcon} />
-                        <input type="text" placeholder="City, state, or zipcode" />
-                    </div>
-                    <div className={styles.insuranceWrapper}>
-                        <BsPostcardHeart className={styles.insuranceIcon} />
-                        <input type="text" placeholder="Insurance carrier" />
-                    </div>
-                    <button className={styles.findButton}>
-                        <IoMdSearch className={styles.findButtonIcon} />
-                        Find now
-                    </button>
+                <div className={styles.searchBox}>
+                    <form>
+                        <div className={styles.inputDiv}>
+                            <IoMdSearch />
+                            <input type="text" placeholder="Condition, procedure, speciality..." />
+                        </div>
+                        <div className={styles.inputDiv}>
+                            <MdLocationOn />
+                            <input type="text" placeholder="City, state, or zipcode" />
+                        </div>
+                        <div className={styles.inputDiv}>
+                            <BsPostcardHeart />
+                            <input type="text" placeholder="Insurance carrier" />
+                        </div>
+                        <button>
+                            <IoMdSearchW />
+                            Find now
+                        </button>
+                    </form>
                 </div>
             </div>
 

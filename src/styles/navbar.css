@@ -71,7 +71,7 @@
   align-items: center;
   gap: 16px;
   font-size: 14px;
-  color: #4b5563;
+  color: #707070;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
 }
@@ -361,4 +361,16 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
   }
+}
+
+.navbar__dropdown-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar__dropdown-text:hover {
+  color: #111827;
 }
