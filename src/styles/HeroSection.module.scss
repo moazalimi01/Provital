@@ -1,0 +1,371 @@
+.hero {
+    display: flex;
+    background: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+    flex-direction: row;
+    font-family: 'Inter', sans-serif;
+
+    .images {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 70px;
+        height: 350px;
+
+        img {
+            width: 100%;
+            border-radius: 60px;
+            object-fit: cover;
+            margin: 0;
+        }
+    }
+
+    .columns {
+        display: flex;
+        width: 650px;
+        max-width: 1000px;
+        justify-content: center;
+        gap: 0;
+        height: 600px;
+    }
+
+    .column1 {
+        flex: 1;
+        margin-left: 80px;
+    }
+
+    .column2 {
+        flex: 1;
+        margin-left: 0;
+    }
+
+    .column1,
+    .column2 {
+        max-height: 600px;
+        overflow: hidden;
+    }
+
+    .tiltedRectangle {
+        position: absolute;
+        top: 600px;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(178deg);
+        width: 102%;
+        height: 50px;
+        background: linear-gradient(45deg, #ff50a1, #ffb547);
+        z-index: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .text {
+        flex: 1;
+        padding-top: 6%;
+        padding-right: 30px;
+        padding-left: 70px;
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            white-space: pre-line;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+
+            .gradientText {
+                background: linear-gradient(to right, #197fbf, #09c9f0);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-weight: bold;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            padding-top: 2%;
+            color: #555;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+        }
+
+        .searchBar {
+            display: flex;
+            position: absolute;
+            top: 392px;
+            z-index: 10;
+            width: 80%;
+            height: 60px;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 10px;
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            max-width: 1200px;
+            font-family: 'Inter', sans-serif;
+
+            input {
+                flex: 1;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding-left: 45px;
+                height: 45px;
+                font-size: 16px;
+                font-family: 'Inter', sans-serif;
+                background: #F9FAFB;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px 20px;
+                padding: 0px;
+                background: linear-gradient(271.76deg, #4683D0 17.7%, #7CD0A2 145.75%);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 140px;
+                height: 65px;
+                gap: 10px;
+                font-size: 16px;
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+            }
+
+            .insuranceWrapper,
+            .locationWrapper,
+            .conditionWrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex: 1;
+                height: 45px;
+            }
+
+            .insuranceIcon,
+            .locationIcon,
+            .searchIcon {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 18px;
+                color: #525252;
+                z-index: 1;
+            }
+
+            .conditionWrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex: 2;
+                height: 45px;
+            }
+
+            .locationWrapper,
+            .insuranceWrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex: 1;
+                height: 45px;
+            }
+        }
+    }
+}
+
+/* MOBILE VIEW STYLES */
+@media (max-width: 1100px) {
+    .hero {
+        display: flex;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+        padding: 0;
+        /* Remove extra padding */
+
+        .columns {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 250px;
+            align-items: center;
+            order: 2;
+            padding: 0 20px;
+            // padding-bottom: 20px;
+            /* Reduced bottom padding */
+            margin: 0;
+        }
+
+        .column3 {
+            flex: 1;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-top: 10px;
+            /* Reduced top padding */
+            height: 400px;
+            /* Reduced height for smaller carousel */
+            overflow: hidden;
+        }
+
+        /* Hide ImageCarousel1 and ImageCarousel2 on mobile */
+        .column1,
+        .column2 {
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Show ImageCarousel3 only on mobile */
+        .column3 {
+            display: block;
+            width: 100%;
+            padding-bottom: 0;
+            /* Ensure no extra space */
+        }
+
+
+        .tiltedRectangle {
+            position: absolute;
+            top: 370px;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(176deg);
+            width: 102%;
+            height: 30px;
+            background: linear-gradient(45deg, #ff50a1, #ffb547);
+            z-index: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px 20px 0;
+            /* Simplified padding */
+
+            h1 {
+                font-size: 28px;
+                line-height: 1.2;
+                margin-bottom: 20px;
+                white-space: normal;
+                
+                br {
+                    display: none;
+                }
+
+                .gradientText {
+                    background: linear-gradient(to right, #197fbf, #09c9f0);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    font-size: 28px;
+                    color: transparent;
+                    font-weight: bold;
+                    display: inline;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                margin-bottom: 30px;
+                color: #555;
+            }
+
+            .searchBar {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                top: auto;
+                width: 90%;
+                height: auto;
+                margin: 20px auto;
+                padding: 15px;
+                transform: none;
+                left: auto;
+                gap: 10px;
+
+                .conditionWrapper,
+                .locationWrapper,
+                .insuranceWrapper {
+                    width: 100%;
+                    padding: 5px 0;
+                    display: flex;
+                    align-items: center;
+                    background: #F9FAFB;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    height: 50px;
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    padding-left: 45px;
+                    border: none;
+                    background: transparent;
+                }
+
+                button {
+                    width: 100%;
+                    height: 50px;
+                    margin: 0;
+                    padding: 10px;
+                    font-size: 16px;
+                    background: linear-gradient(271.76deg, #4683D0 17.7%, #7CD0A2 145.75%);
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .insuranceIcon,
+                .locationIcon,
+                .searchIcon {
+                    position: absolute;
+                    left: 15px;
+                    font-size: 18px;
+                    color: #525252;
+                    z-index: 1;
+                }
+            }
+
+            .insuranceWrapper,
+            .locationWrapper,
+            .conditionWrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex: 1;
+            }
+
+            .insuranceIcon,
+            .locationIcon,
+            .searchIcon {
+                position: absolute;
+                left: 15px;
+                font-size: 18px;
+                color: #525252;
+                z-index: 1;
+            }
+
+            .locationWrapper,
+            .conditionWrapper {
+                input {
+                    padding-left: 45px;
+                }
+            }
+        }
+    }
+}

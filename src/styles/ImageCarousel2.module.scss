@@ -1,0 +1,32 @@
+/* components/ImageCarousel.module.scss */
+.column {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    padding-left: 0px;
+}
+
+.imageStack {
+    display: flex;
+    flex-direction: column;
+    animation: looping 20s linear infinite;
+    will-change: transform;
+}
+
+.image {
+    width: 250px;
+    height: 355px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+@keyframes looping {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(-50%));
+    }
+}
