@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from "./Icons";
 import '../styles/navbar.css';
 
 export default function Navbar() {

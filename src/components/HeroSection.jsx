@@ -4,9 +4,7 @@ import styles from "../styles/HeroSection.module.scss";
 import ImageCarousel1 from "./ImageCarousel1"; // Adjust the path if needed
 import ImageCarousel2 from "./ImageCarousel2"; // Adjust the path if needed
 import ImageCarousel3 from "./ImageCarousel3"; // Import ImageCarousel3
-import { BsPostcardHeart } from "react-icons/bs";
-import { MdLocationOn } from "react-icons/md";
-import { IoMdSearch } from "react-icons/io"; // Import IoMdSearch
+import { BsPostcardHeart, MdLocationOn, IoMdSearch } from "./Icons";
 
 const HeroSection = () => {
     const [isMobile, setIsMobile] = useState(false);

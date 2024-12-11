@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { GoArrowLeft, GoArrowRight } from "./Icons";
 import styles from "../styles/SixPillars.module.scss";
-import Card from "./Card";
+import Card from "./card";
 
 const SixPillars = () => {
     const sliderRef = useRef(null);

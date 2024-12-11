@@ -52,8 +52,6 @@ npm run build
 - React (v18.3.1)
 - React DOM (v18.3.1)
 - React Router DOM (v7.0.2)
-- Lucide React (v0.468.0)
-- React Icons (v5.4.0)
 - SASS (v1.82.0)
 
 ## Dev Dependencies
